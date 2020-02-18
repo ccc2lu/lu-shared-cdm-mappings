@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<mods xmlns:xlink="http://www.w3.org/1999/xlink" version="3.5"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3"
+    xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-5.xsd">
+
+<titleInfo>
+    <title><?cdm-element-name Title?></title>
+</titleInfo>
+<abstract><?cdm-element-name Description?></abstract>
+<originInfo>
+    <publisher><?cdm-element-name Publisher?></publisher>
+    <dateCreated keyDate="yes"><?cdm-element-name Date?></dateCreated>
+</originInfo>
+<subject authority="lcsh">
+    <topic><?cdm-element-name Subject?></topic>
+</subject>
+<subject>
+    <geographic authority="naf"><?cdm-element-name Subject-Geographic?></geographic>
+</subject>
+<subject authority="tgn">
+    <geographic><?cdm-element-name Coverage?></geographic>
+</subject>
+<subject>
+    <name authority="naf"><?cdm-element-name Subject-Name?></name>
+</subject>
+<physicalDescription>
+    <form><?cdm-element-name Format?></form>
+    <form><?cdm-element-name Original-Item-Medium?></form>
+    <internetMediaType><?cdm-element-name Digital-File-Format?></internetMediaType>
+</physicalDescription>
+<language>
+    <languageTerm authority="iso639-2b"><?cdm-element-name Language?></languageTerm>
+</language>
+<note><?cdm-element-name Note?></note>
+<note type="preferred citation"><?cdm-element-name Preferred-Citation?></note>
+<identifier type="call number"><?cdm-element-name Identifier?></identifier>
+<typeOfResource><?cdm-element-name Type?></typeOfResource>
+<accessCondition type="use and reproduction"><?cdm-element-name Rights?></accessCondition>
+<name type="personal"><namePart><?cdm-element-name Photographer?></namePart><role><roleTerm type="text" authority="marcrelator">Photographer</roleTerm></role></name>
+</mods>

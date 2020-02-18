@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<mods xmlns:xlink="http://www.w3.org/1999/xlink" version="3.5"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3"
+  xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-5.xsd">
+
+  <titleInfo>
+    <title><?cdm-element-name Title?></title>
+  </titleInfo>
+
+  <abstract><?cdm-element-name Description?></abstract>
+
+  <name type="personal">
+    <namePart><?cdm-element-name Creator?></namePart>
+    <role>
+      <roleTerm type="text">creator</roleTerm>
+    </role>
+  </name>
+  
+  <name type="personal">
+    <namePart><?cdm-element-name Contributor?></namePart>
+    <role>
+      <roleTerm type="text" authority="marcrelator">contributor</roleTerm>
+    </role>
+  </name>
+
+  <typeOfResource><?cdm-element-name Type?></typeOfResource>
+
+  <genre><?cdm-element-name Original-Format?></genre>
+
+  <originInfo eventType="publication">
+    <publisher><?cdm-element-name Publisher?></publisher>
+    <dateCreated encoding="w3cdtf" keyDate="yes"><?cdm-element-name Date?></dateCreated>
+    <dateCaptured encoding="w3cdtf"><?cdm-element-name Date-Digitized?></dateCaptured>
+  </originInfo>
+
+  <language>
+    <languageTerm authority="iso639-2b" type="code"
+      authorityURI="http://id.loc.gov/vocabulary/iso639-2"><?cdm-element-name Language?></languageTerm>
+  </language>
+
+  <physicalDescription>
+    <form><?cdm-element-name Original-Format?></form>
+    <extent unit="page"><?cdm-element-name Extent?></extent>
+    <extent unit="centimeter"><?cdm-element-name Dimensions?></extent>
+    <internetMediaType><?cdm-element-name File-Format?></internetMediaType>
+  </physicalDescription>
+
+  <note type="PPI"><?cdm-element-name PPI?></note>
+  <note type="Capture Device"><?cdm-element-name Capture-Device?></note>
+  <note type="Staff"><?cdm-element-name Staff?></note>
+
+
+  <subject authority="lcsh" authorityURI="http://id.loc.gov/authorities/subjects">
+    <topic><?cdm-element-name Subject?></topic>
+  </subject>
+  <subject>
+    <geographic><?cdm-element-name Coverage?></geographic>
+  </subject>
+
+  <identifier type="call number"><?cdm-element-name Identifier?></identifier>
+  <identifier type="uri" displayLabel="Catalog Record"><?cdm-element-name Catalog-Record?></identifier>
+
+  <relatedItem type="original">
+    <titleInfo>
+      <title><?cdm-element-name Source?></title>
+    </titleInfo>
+  </relatedItem>
+
+  <relatedItem>
+    <titleInfo>
+      <title><?cdm-element-name Relation?></title>
+      </titleInfo>
+  </relatedItem>
+  
+  <relatedItem type="host"  displayLabel="Archival Collection">
+    <titleInfo>
+      <title><?cdm-element-name Collection?></title>
+    </titleInfo>
+  </relatedItem>
+
+  <accessCondition type="use and reproduction"><?cdm-element-name Rights?></accessCondition>
+
+  <recordInfo>
+    <recordOrigin>Converted from Dublin Core to MODS during migration from CONTENTdm to Islandora</recordOrigin>
+  </recordInfo>
+</mods>
