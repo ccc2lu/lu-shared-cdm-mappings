@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<mods xmlns:xlink="http://www.w3.org/1999/xlink" version="3.5"
+<mods xmlns:xlink="http://www.w3.org/1999/xlink" version="3.7"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3"
-  xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-5.xsd">
+  xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-7.xsd">
 
   <titleInfo>
     <title><?cdm-element-name Title?></title>
@@ -83,4 +83,40 @@
   <recordInfo>
     <recordOrigin>Converted from Dublin Core to MODS during migration from CONTENTdm to Islandora</recordOrigin>
   </recordInfo>
+  
+  
+  <!-- DO NOT REMOVE ANY OF THE FOLLOWING CONTENT -->
+  
+  <!-- This will map the file extension to a content model -->
+  <relatedItem otherType="islandoraCModel" otherTypeAuth="dgi">
+    <identifier><?cdm-element-name contentdm-fileName?></identifier>
+  </relatedItem>
+  
+  <!-- assign collection -->
+  <relatedItem otherType="islandoraCollection" otherTypeAuth="dgi"/>
+  
+  <!-- assign parent/child relationships -->
+  <relatedItem otherType="isChildOf" otherTypeAuth="dgi"/>
+  
+  <!-- This will embed a link the ingest process can follow to retrieve the digital object to place
+         in the OBJ datastream. This PI must be mapped to the element that has the ContentDM item url. -->
+  <relatedItem otherType="OBJ" otherTypeAuth="dgi">
+    <?cdm-element-name item-url?>
+  </relatedItem>
+  
+  
+  <!-- This will temporarily embed the original ContentDM data. It is retrieved by the ingest process and stored
+         in a CDM datastream. -->
+  <relatedItem otherType="CDMDatastream" otherTypeAuth="dgi">
+    <extension><?cdm-element-name record?></extension>
+  </relatedItem>
+  
+  <!-- This will temporarily embed the full text data. It is retrieved by the ingest process and stored
+         in a FULLTEXT datastream. -->
+  <relatedItem otherType="FULLTEXTDatastream" otherTypeAuth="dgi">
+    <extension>
+      <FULLTEXT><?cdm-element-name full-text?></FULLTEXT>
+    </extension>
+  </relatedItem>
+  
 </mods>
