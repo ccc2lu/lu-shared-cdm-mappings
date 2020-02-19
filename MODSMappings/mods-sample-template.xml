@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-7.xsd"
+    version="3.7">
+    
+    <titleInfo>
+        <title><?cdm-element-name title?></title>
+    </titleInfo>
+    
+    <titleInfo type="alternative">
+        <title><?cdm-element-name alternative-title?></title>
+    </titleInfo>
+    
+    <identifier type="local"><?cdm-element-name identifier?></identifier>    
+    <identifier type="oclc"><?cdm-element-name oclc-number?></identifier>
+    
+    <typeOfResource><?cdm-element-name type?></typeOfResource>
+    
+    <language>
+        <languageTerm authority="iso639-2b" type="code"><?cdm-element-name language-code?></languageTerm>
+    </language>
+    <language>
+        <languageTerm type="text"><?cdm-element-name language?></languageTerm>
+    </language>
+    
+    <genre><?cdm-element-name genre?></genre>    
+    
+    <name type="personal">
+        <namePart><?cdm-element-name creator?></namePart>
+        <role>
+            <roleTerm type="text" authority="marcrelator">Author</roleTerm>
+        </role>
+    </name>
+    <name type="personal">
+        <namePart><?cdm-element-name contributors?></namePart>
+        <role>
+            <roleTerm type="text" authority="marcrelator">Contributor</roleTerm>
+        </role>
+    </name>
+    <name type="personal">
+        <namePart><?cdm-element-name donors?></namePart>
+        <role>
+            <roleTerm type="text" authority="marcrelator">Donor</roleTerm>
+        </role>
+    </name>
+    
+    <subject authority="trctemp">
+        <topic><?cdm-element-name keywords?></topic>
+    </subject>
+    
+    <originInfo eventType="publication">
+        <dateIssued keyDate="yes" encoding="w3cdtf"><?cdm-element-name date?></dateIssued>
+        <dateIssued><?cdm-element-name date?></dateIssued>
+        <place>
+            <placeTerm type="text"><?cdm-element-name place-publication?></placeTerm>
+        </place>
+        <place>
+            <placeTerm type="code" authority="marccountry"><?cdm-element-name country-code?></placeTerm>
+        </place>
+        <publisher><?cdm-element-name publication-information?></publisher>
+    </originInfo>
+    
+    <originInfo eventType="manufacture">
+        <dateIssued keyDate="yes" encoding="w3cdtf"><?cdm-element-name date?></dateIssued>
+        <dateIssued><?cdm-element-name date?></dateIssued>
+        <place>
+            <placeTerm type="text"><?cdm-element-name country-origin?></placeTerm>
+        </place>
+        <place>
+            <placeTerm type="code" authority="marccountry"><?cdm-element-name country-code?></placeTerm>
+        </place>
+        <publisher><?cdm-element-name publication-information?></publisher>
+    </originInfo>
+    
+    
+    <location>
+        <holdingSimple>
+            <copyInformation>
+                <shelfLocator><?cdm-element-name location?></shelfLocator>
+            </copyInformation>
+        </holdingSimple>
+    </location>
+    
+    <recordInfo displayLabel="scanning">
+        <recordChangeDate><?cdm-element-name date-scanned?></recordChangeDate>
+        <recordContentSource><?cdm-element-name scanner?></recordContentSource>        
+    </recordInfo>
+    
+    <recordInfo displayLabel="cataloging">
+        <recordContentSource><?cdm-element-name cataloger?></recordContentSource>
+        <recordChangeDate><?cdm-element-name date-cataloged?></recordChangeDate>
+    </recordInfo>
+    
+    <recordInfo>
+        <recordCreationDate><?cdm-element-name date-created?></recordCreationDate>
+        <recordChangeDate><?cdm-element-name date-modified?></recordChangeDate>
+    </recordInfo> 
+    
+    <physicalDescription>
+        <extent><?cdm-element-name object-dimensions?></extent>
+        <form type="materials"><?cdm-element-name physical-description?></form>
+    </physicalDescription>
+    
+    <accessCondition type="use and reproduction"><?cdm-element-name rights-statement?></accessCondition>
+    
+    <note type="local"><?cdm-element-name notes?></note>
+    
+    <note type="digitization specifications"><?cdm-element-name digitization-specifications?></note>
+
+    <relatedItem type="host">
+        <identifier type="collectionName"><?cdm-element-name collectionName?></identifier>
+    </relatedItem>
+    
+    
+    <!-- DO NOT REMOVE ANY OF THE FOLLOWING CONTENT -->
+    
+    <!-- This will map the file extension to a content model -->
+    <relatedItem otherType="islandoraCModel" otherTypeAuth="dgi">
+        <identifier><?cdm-element-name contentdm-fileName?></identifier>
+    </relatedItem>
+    
+    <!-- assign collection -->
+    <relatedItem otherType="islandoraCollection" otherTypeAuth="dgi"/>
+    
+    <!-- assign parent/child relationships -->
+    <relatedItem otherType="isChildOf" otherTypeAuth="dgi"/>
+    
+    <!-- This will embed a link the ingest process can follow to retrieve the digital object to place
+         in the OBJ datastream. This PI must be mapped to the element that has the ContentDM item url. -->
+    <relatedItem otherType="OBJ" otherTypeAuth="dgi">
+        <?cdm-element-name item-url?>
+    </relatedItem>
+    
+    
+    <!-- This will temporarily embed the original ContentDM data. It is retrieved by the ingest process and stored
+         in a CDM datastream. -->
+    <relatedItem otherType="CDMDatastream" otherTypeAuth="dgi">
+        <extension><?cdm-element-name record?></extension>
+    </relatedItem>
+    
+    <!-- This will temporarily embed the full text data. It is retrieved by the ingest process and stored
+         in a FULLTEXT datastream. -->
+    <relatedItem otherType="FULLTEXTDatastream" otherTypeAuth="dgi">
+        <extension>
+            <FULLTEXT><?cdm-element-name full-text?></FULLTEXT>
+        </extension>
+    </relatedItem>
+    
+    
+    
+</mods>
